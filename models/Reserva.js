@@ -1,5 +1,6 @@
 // TODO: Crear modelo de datos de Reserva
-const { sequelize, DataTypes } = require('../db.js'); 
+const { sequelize } = require('../db.js');
+const { DataTypes } = require('sequelize');
 
 const Reserva = sequelize.define('Reserva', {
     id: {
@@ -30,5 +31,7 @@ const Reserva = sequelize.define('Reserva', {
     updatedAt: true,
     deletedAt: true,
     tableName: 'reservas'
-})
+});
+
+module.exports = Reserva;
 

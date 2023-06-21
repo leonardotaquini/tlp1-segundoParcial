@@ -2,15 +2,19 @@
 const cors = require('cors');
 const express = require('express');
 const morgan = require('morgan');
+const helmet = require('helmet');
 const path = require('path');
 const { connectDB } = require('./db.js');
+require('ejs');
 
 const app = express();
+app.set('view engine', 'ejs');
 const PORT = process.env.PORT || 3000;
 
 // Middlewares
 app.use(cors());
 app.use(morgan('dev'));
+app.use(helmet());
 app.use(express.json());
 // TODO: Implementar middlewares
 

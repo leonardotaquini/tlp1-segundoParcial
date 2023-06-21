@@ -1,5 +1,5 @@
 //Se importan clases de la libreria
-const { Sequelize, Model, Datatypes } = require('sequelize');
+const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
 //Se crea una instancia de la conexion a la base de datos
@@ -25,7 +25,5 @@ const connectDB = async() => {
 
 module.exports = {
     sequelize,
-    Model,
-    Datatypes,
     connectDB
 }
