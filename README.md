@@ -1,4 +1,4 @@
-# Aplicación de Tareas en Node.js
+# Aplicación de Reservas en Node.js
 
 Esta es una aplicación de examen parcial en la que se puede hacer un CRUD de reservas.
 
