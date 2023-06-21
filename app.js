@@ -3,6 +3,7 @@ const cors = require('cors');
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
+const { connectDB } = require('./db.js');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,6 +13,9 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 // TODO: Implementar middlewares
+
+//Conecto con la base de datos.
+connectDB();
 
 app.use(express.static(path.join(__dirname, 'public')));
 
